@@ -4,19 +4,19 @@ const Accordion = ({ title, content }) => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <div className="border-b border-gray-300 last:border-b-0">
+    <div>
       <button
         className={`w-full text-left py-4 px-6 transition-colors duration-300 ${
           isOpen ? 'bg-gray-200 text-blue-600' : 'bg-gray-100 hover:bg-gray-200'
-        } focus:outline-none`}
+        }`}
         onClick={() => setIsOpen(!isOpen)}
         aria-expanded={isOpen}
       >
         <h3 className="text-lg font-semibold">{title}</h3>
       </button>
       <div
-        className={`transition-all duration-300 ease-out ${
-          isOpen ? 'max-h-screen opacity-100 bg-gray-50 p-6' : 'max-h-0 opacity-0'
+        className={`transition-max-height duration-300 ease-out ${
+          isOpen ? 'max-h-96 opacity-100 bg-gray-50 p-6' : 'max-h-0 opacity-0'
         } overflow-hidden`}
       >
         <p className="text-gray-700">{content}</p>
