@@ -13,17 +13,20 @@ const SimpleSlider = () => {
   };
 
   return (
-    <div>
-      <h2> スライドショー </h2>
-      <Slider {...settings}>
-        <div>
-          <h3>スライド 1</h3>
+    <div className="w-full max-w-4xl mx-auto mt-10">
+      <h2 className="text-3xl font-bold text-center mb-6">スライドショー</h2>
+      <Slider {...settings} className="relative">
+        <div className="bg-gray-200 p-8 rounded-lg shadow-md">
+          <h3 className="text-xl font-semibold">スライド 1</h3>
+          <p className="mt-2 text-gray-700">これはスライド 1 の内容です。</p>
         </div>
-        <div>
-          <h3>スライド 2</h3>
+        <div className="bg-gray-200 p-8 rounded-lg shadow-md">
+          <h3 className="text-xl font-semibold">スライド 2</h3>
+          <p className="mt-2 text-gray-700">これはスライド 2 の内容です。</p>
         </div>
-        <div>
-          <h3>スライド 3</h3>
+        <div className="bg-gray-200 p-8 rounded-lg shadow-md">
+          <h3 className="text-xl font-semibold">スライド 3</h3>
+          <p className="mt-2 text-gray-700">これはスライド 3 の内容です。</p>
         </div>
       </Slider>
     </div>
